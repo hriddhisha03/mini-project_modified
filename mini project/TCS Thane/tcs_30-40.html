@@ -1,0 +1,138 @@
+<html>
+   <head> 
+      
+      
+      <title>20-30k BUDGET</title> 
+         <meta name="viewport" content="width=device-width, initial-scale=1"> 
+         <script type="text/javascript" src="<script src=&quot;http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js&quot;></script>"></script> 
+         <link rel="stylesheet" type="text/css" href="https://unpkg.com/leaflet@1.0.1/dist/leaflet.css"> 
+         <script type="text/javascript" src="https://unpkg.com/leaflet@1.0.1/dist/leaflet.js"></script> 
+         <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+         <link rel="stylesheet" href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css" />
+         <script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+         <style id="compiled-css" type="text/css">
+
+
+.map-container {
+   width: 1200px;
+   margin: 0 auto;
+}
+
+
+      </style> 
+      <style>
+        body {
+            margin: 0px;
+            padding:0%;
+        }
+        #map{
+            width: 1200px;
+            height: 1000px;
+        }
+        .customPopUp{
+            background-color: #b1dba5;
+            border-radius: 5px;
+            padding: 10px;
+            color:black;
+        }
+         .customPopUp1{
+            background-color: #f7b7a3;
+            border-radius: 5px;
+            padding: 20px;
+            color:black;
+         }
+         .customPopUp2{
+               background-color: #c896ef;
+               border-radius: 5px;
+               padding: 10px;
+               color:black;
+         }  
+      </style>
+      <script type="text/javascript">
+    window.onload=function(){
+var map = new L.Map('map-canvas', {
+    center: new L.LatLng(37.7829,-122.1312),
+    zoom: 10
+  });
+  var googleStreets = L.tileLayer('http://{s}.google.com/vt/lyrs=m&x={x}&y={y}&z={z}',{
+    maxZoom: 20,
+    subdomains:['mt0','mt1','mt2','mt3']
+});
+googleStreets.addTo(map); 
+var testData = [{lat:19.253540687444023,lon: 72.97991790907795,text:"TCS THANE (BUDGET-20-30k)"},
+{lat:19.061174581369592,lon: 72.89290049667379 ,text:"<div class='customPopUp'>Omkar Raga , 34min, 25km</div>"},
+{lat:19.030131504274447,lon: 73.02548575947297,text:"<div class='customPopUp1'>Madhavi CHS, 7min, 2.4km"},
+{lat:19.21935437463418,lon: 72.86028957630342 ,text:"<div class='customPopUp2'>Ekta Bhoomi Gardens 1 AND 2, 47min, 23km"}
+   ];
+
+var popup_layer = new L.layerGroup();
+$.each(testData, function(index, p) {
+   var marker = L.marker(L.latLng(p.lat, p.lon));
+   marker.addTo(map);
+   popup = new L.popup({offset:  new L.Point(0, -30), closeOnClick: false}); // Disable popup from closing on click
+   popup.setLatLng(L.latLng(p.lat, p.lon));
+   popup.setContent(p.text);
+   popup.openPopup();
+   popup_layer.addLayer(popup);
+});
+popup_layer.addTo(map);
+
+
+    
+   var circle= L.circle([19.253540687444023, 72.97991790907795],
+      {color: 'purple',
+      fillColor: '#E4C7FA',
+      fillOpacity: 0.3,
+      radius: 15000}).addTo(map);
+   //var circle2 = L.circle([19.070430890350146, 73.07472320704437]).addTo(map);
+   //var circle3 = L.circle([19.070009863486582, 73.08264358371159]).addTo(map);
+
+// var circle2= L.circle([19.03037798767645, 73.06490602281603],{radius:1000}).addTo(map);
+// FROM COLLEGE TO RESIDENCY
+L.Routing.control({
+  waypoints: [
+    L.latLng(19.253540687444023, 72.97991790907795),
+    L.latLng(19.061174581369592, 72.89290049667379)
+  ]
+}).addTo(map);
+
+// college to residency 2
+L.Routing.control({
+  waypoints: [
+    L.latLng(19.253540687444023, 72.97991790907795),
+    L.latLng(19.030131504274447,73.02548575947297)
+  ]
+}).addTo(map);
+
+// college to residency 3  
+L.Routing.control({
+  waypoints: [
+    L.latLng(19.253540687444023, 72.97991790907795),
+    L.latLng(19.259371805469193, 72.98451105603523)
+  ]
+}).addTo(map);
+
+}
+    
+
+      </script> 
+   </head> 
+   <body> 
+    <header>
+        <nav class="navbar">
+            <div class="navdiv">
+                <div class="logo"><a href="../index.html" style="color: white;">DigiLife</a></div>
+                
+            </div>
+            
+        </nav>
+    </header>
+      <div class="row"> 
+         <div class="col-md-12"> 
+            <div class="map-container"> 
+               <div id="map-canvas" style="width: 100%; height: 2000px"></div> 
+            </div> 
+         </div> 
+      </div>  
+   </body>
+</html>

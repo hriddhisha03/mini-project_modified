@@ -1,0 +1,595 @@
+.navbar{
+    background: rgb(65, 32, 102);
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  
+  .navdiv{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 10px;
+    
+  }
+  
+  .logo {
+    padding-left: 20px;
+    font-size: 35px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+  }
+  .btn{
+    align-self: flex-end;
+    padding: 17px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    border: 0;
+    background-color: white;
+    box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-size: 15px;
+    transition: all 0.5s ease;
+  }
+  
+  .btn:hover {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 7px 29px 0px;
+  }
+  
+  .btn:active {
+    letter-spacing: 3px;
+    background-color: hsl(261deg 80% 48%);
+    color: hsl(0, 0%, 100%);
+    box-shadow: rgb(93 24 220) 0px 0px 0px 0px;
+    transform: translateY(10px);
+    transition: 100ms;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
+  
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+     /* Add some padding inside the section */
+    margin-bottom: 20px; /* Add margin at the bottom to separate sections */
+    margin-top: 50px;
+    margin-left: 70px;
+    margin-right: -50px;
+    
+    
+  }
+  .container1 {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+     /* Add some padding inside the section */
+    margin-bottom: 20px; /* Add margin at the bottom to separate sections */
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: -50px;
+    
+    
+  }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); 
+    
+  }
+  .row1{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    
+    
+  }
+  .subsection {
+    flex: 0 0 48%;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative;
+    text-align: left;
+    margin: auto;
+
+  }
+  .subsection1 {
+    flex: 0 0 48%;
+    padding: 10px;
+    border-radius: 5px;
+    position: relative; 
+    text-align: left;
+    margin: auto;
+  }
+  .icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+  h3 {
+    padding-right: 40px;
+    position: relative;
+  }
+body {
+    background-color: #f5f5f4;
+}
+
+#navlist {
+    display: flex;
+    align-items: center;
+    font-size: 24px; /* Adjust the font size as needed */
+}
+
+#navlist img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+#navlist a {
+    text-decoration: none;
+    color: #000; /* Set the color as desired */
+}
+
+.flat {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    border: 1px solid #ccc; /* Add a border */
+    padding: 50px; /* Add some padding inside the section */
+    margin-bottom: 20px; /* Add margin at the bottom to separate sections */
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 130px;
+    padding-top: 100px;
+}
+
+section.image {
+    display: flex;
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically */
+}
+
+section.image img {
+    max-width: 100%;
+    height: auto;
+    margin-right: 10px; /* Add some space between images */
+}
+
+.details {
+    text-align: center; /* Center text */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    margin-right: 350px;
+}
+
+.details h4 {
+    margin: 0; /* Remove default margin */
+}
+
+.other {
+    
+        display: flex;
+        justify-content: right; /* Adjust as needed */
+        margin-top: 50px;
+    
+}
+
+.a {
+    
+    align-items: right;
+    background-color: #fff;
+    padding: 10px;
+    margin-right: 10px; /* Space between sections */
+    margin-bottom: 10px;
+}
+.amenity-icon{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.rent-container {
+    display: grid;
+    grid-template-rows: 10px 10px 10px;
+    grid-template-columns: 300px 150px 150px;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #fff;
+    padding: 10px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.charges-container {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 400px;
+    width: 1000px; /* Increase the width as needed */
+    z-index: 1;
+    text-align: left;
+}
+
+.show-more-icon {
+    cursor: pointer;
+    color: #007bff;
+    margin-left: 0px;
+}
+
+.show-more-icon:hover + .charges-container {
+    display: block;
+    width: fit-content;
+}
+.property {
+    float: left; /* Float the property to the left */
+    clear: left; /* Clear the float to prevent overlapping */
+    width: 50%; /* Set the width to half of the container */
+}
+
+.value {
+    float: right; /* Float the value to the right */
+    clear: right; /* Clear the float to prevent overlapping */
+    width: 50%; /* Set the width to half of the container */
+}
+.more_details{
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    border: 1px solid #ccc; /* Add a border */
+    padding: 20px; /* Add some padding inside the section */
+    margin-bottom: 20px; /* Add margin at the bottom to separate sections */
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 130px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); 
+    }
+.item{
+    font-size: 18px;
+}
+.amenities-section {
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 130px;
+}
+
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container {
+    margin-right: 130px; /* Adjusted margin to match the flat amenity section */
+}
+.flat, .container {
+    background-color: #fff;
+    padding: 20px;
+}
+.flat{
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); 
+}
+
+.amenity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    width: calc(33.33% - 20px); /* 33.33% width for each amenity with margin */
+}
+
+.amenity-icon {
+    font-size: 36px;
+    margin-bottom: 5px;
+}
+
+.amenity-label {
+    font-size: 14px;
+    text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+.feedback-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    padding: 20px; /* Add some padding inside the section */
+    margin-bottom: 20px; /* Add margin at the bottom to separate sections */
+    margin-top: 50px;
+    margin-left: 300px;
+    margin-right: 30px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); 
+    
+}
+.feedback-form label {
+    display: block;
+    margin-bottom: 10px;
+
+}
+.stars {
+    display: inline-block;
+}
+.stars input[type="radio"] {
+    display: none;
+}
+.stars label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    padding-right: 5px;
+}
+.stars label:hover,
+.stars label:hover ~ label {
+    color: orange;
+}
+.stars input[type="radio"]:checked ~ label {
+    color: orange;
+}
+.feedback-form input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+.feedback-form input[type="submit"]:hover {
+    background-color: #45a049;
+}
+#feedbackSection {
+    margin-top: 20px;
+}
+
+
+#map {
+    width: 100%;
+    height: 500px;
+}
+.customPopUp{
+    background-color: #b1dba5;
+    border-radius: 5px;
+    padding: 10px;
+    color:black;
+}
+.customPopUp1{
+    background-color: #f7d6d5;
+    border-radius: 5px;
+    padding: 10px;
+    color:black;
+}
+.map-view {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    margin-left: 100px;
+    margin-right: 130px;
+}
+#map {
+    width: 100%;
+    height: 500px;
+}
+.zoomed {
+    transform: scale(1.5); /* Scale image on click for a larger zoom effect */
+    z-index: 1; /* Bring zoomed image to the front */
+}
+
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS */
+}
+
+.property-image {
+    
+    width: 200px; /* Adjust as needed */
+    height: 100px; /* Adjust as needed */
+    margin-right: 0; /* Add space between images */
+    object-fit: cover; /* Ensure images maintain aspect ratio */
+    cursor: pointer; /* Show pointer cursor on hover */
+    margin-left: 300px;
+}
+
+.property-image:hover {
+    transform: scale(1.1); /* Scale image on hover for a zoom effect */
+}
+
+.bedroom-info{
+    text-align: center;
+    align-items: center;
+    padding-left: 200px;
+}
+
+.slide {
+    position: relative; /* Ensure relative positioning for absolute children */
+    margin-top: -450px; /* Adjust the top margin as needed */
+    margin-right: 250px;
+}
+
+.slide .item {
+    /* Remove absolute positioning and adjust margins */
+    margin-top: 20px; /* Adjust the top margin as needed */
+    /* Other styles */
+}
+
+
+.slide .item{
+    width: 00px;
+    height: 300px;
+    margin-bottom: 500px;
+    position: absolute;
+    top: 20%;
+    transform: translate(0, -30%);
+    border-radius: 20px;
+    background-position: 50% 50%;
+    background-size: cover;
+    display: inline-block;
+}
+
+.slide .item:nth-child(1),
+.slide .item:nth-child(2){
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+    border-radius: 0;
+    margin-top: 500px;
+    width: 300px;
+    margin-left: 130px;
+    height: 200px;
+}
+
+
+.slide .item:nth-child(3){
+    left: 50%;
+}
+.slide .item:nth-child(4){
+    left: calc(50% + 20px);
+}
+.slide .item:nth-child(5){
+    left: calc(50% + 40px);
+}
+
+/* here n = 0, 1, 2, 3,... */
+.slide .item:nth-child(n + 6){
+    left: calc(10% + 60px);
+    opacity: 0;
+}
+
+
+
+.item .content{
+    position: absolute;
+    top: 50%;
+    left: 100px;
+    width: 300px;
+    text-align: left;
+    color: #eee;
+    transform: translate(0, -50%);
+    font-family: system-ui;
+    display: none;
+}
+
+
+.slide .item:nth-child(2) .content{
+    display: block;
+}
+
+
+.content .name{
+    font-size: 40px;
+    text-transform: uppercase;
+    font-weight: bold;
+    opacity: 0;
+    animation: animate 1s ease-in-out 1 forwards;
+}
+
+.content .des{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.3s 1 forwards;
+}
+
+.content button{
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0;
+    animation: animate 1s ease-in-out 0.6s 1 forwards;
+}
+
+
+@keyframes animate {
+    from{
+        opacity: 0;
+        transform: translate(0, 100px);
+        filter: blur(33px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate(0);
+        filter: blur(0);
+    }
+}
+
+
+
+.button{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 20px;
+    margin-left: 100px;
+}
+
+.button button{
+    width: 40px;
+    height: 35px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    margin: 0 5px;
+    border: 1px solid #000;
+    transition: 0.3s;
+}
+
+.button button:hover{
+    background: #abababc1;
+    color: #fff;
+}
+.button prev,next{
+    margin-bottom: 100px;
+}
+

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMIMS</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        .weather-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .weather-info {
+            width: 10000%; /* Adjusted the width */
+            margin-left: 10px;
+            text-align: justify;
+        }
+        .weather-data-row {
+            display: grid; /* Display weather data in a row */
+            flex-direction: row;
+            grid-template-rows: 10px;
+            grid-template-columns: 400px 400px; /* Allow wrapping of weather data items */
+        }
+        .weather-data-item {
+            flex: 1; /* Each weather data item takes equal space */
+            margin-right: 20px;
+             /* Adjust spacing between weather data items */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navdiv">
+                <div class="logo"><a href="../index.html" style="color: white;">DigiLife</a></div>
+                <ul>
+                    <div class="dropdown">
+                        <button class="btn">Budget</button>
+                        <div class="dropdown-content">
+                            <a href="nmims_main.html">All</a>  
+                          <a href="nm20-30.html">20k-30k</a>
+                          <a href="nm30-40.html">30k-40k</a>
+                          <a href="nm40.html">40k+</a>
+                        </div>
+                    </div> 
+                </ul>
+            </div>
+            
+        </nav>
+    </header>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image1" src="img/Krishna Residency.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name: Krishna Residency</h1>
+                <h2>Address:Sector 35E, Kharghar, Navi Mumbai, Maharashtra 410210</h2>
+                <!-- Weather data will be inserted here -->
+                <div class="weather-data-row" id="weather-data1"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info1"></div>
+            </div>
+        </div>
+        <div class="item item-3">
+            <a href="./krishna_residency.html"><button class="button"><b><u>Rental</u></b></button></a><br>
+            <a href="nm_20-30.html"><button class="button"><b><u>Map View</b></u></button></a><br>
+            <a href="https://maps.app.goo.gl/bCZWmTa6KJNdwEVJA"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image2" src="img/Fortune Heights.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name: Fortune Heights</h1>
+                <h2>Address:Plot no. 25, Sector 34 E, Sector 35E, Kharghar, Navi Mumbai, Maharashtra 410210</h2>
+                <div class="weather-data-row" id="weather-data2"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info2"></div>
+            </div>
+        </div>
+        <div class="item item-3">
+            <a href="./fortune_heights.html"><button class="button"><b><u>Rental</b></u></button></a><br>
+            <a href="nm_20-30.html"><button class="button"><b><u>Map View</b></u></button></a><br>
+            <a href="https://maps.app.goo.gl/yabzTFMAmUywBYXbA"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image3" src="img/laxmi angan.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name: Laxmi Aangan</h1>
+                <h2>Address:Plot no-7,Sector-34 A, Parsi, Kharghar, Navi Mumbai, Maharashtra 410210</h2>
+                <div class="weather-data-row" id="weather-data3"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info3"></div>
+            </div>
+        </div>
+        <div class="item item-3">
+            <a href="./laxmi_angan.html"><button class="button"><b><u>Rental</b></u></button></a><br>
+            <a href="nm_20-30.html"><button class="button"><b><u>Map View</b></u></button></a><br>
+            <a href="https://maps.app.goo.gl/NUC8RVdb9N42HpVt8"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image4" src="img/Arihant Krupa.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name:Arihant Krupa</h1>
+                <h2>Address:CWING, ARIHANT KRUPA, 40, Ranjanpada, Sector 27, Kharghar, Navi Mumbai, Maharashtra 410210</h2>
+                <div class="weather-data-row" id="weather-data4"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info4"></div>
+            </div>
+        </div>
+        <div class="item item-5">
+            <a href="./arihant_krupa.html"><button class="button"><b><u>Rental</b></u></button></a><br><br>
+            <a href="nm_30-40.html"><button class="button"><b><u>Map View</b></u></button></a><br><br>
+            <a href="https://maps.app.goo.gl/hdxtu5uMpj3xn74Z9"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image5" src="img/Meghna Heights.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name:Meghna Heights</h1>
+                <h2>Address:Farshiwadi Village, Sector-34 A, Sector 34, Kharghar, Navi Mumbai, Maharashtra 410210</h2>
+                <div class="weather-data-row" id="weather-data5"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info5"></div>
+            </div>
+        </div>
+        <div class="item item-3">
+            <a href="./megha_heights.html"><button class="button"><b><u>Rental</b></u></button></a><br>
+            <a href="nm_30-40.html"><button class="button"><b><u>Map View</b></u></button></a><br>
+            <a href="https://maps.app.goo.gl/SP4bberzeE83otEi7"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image6" src="img/Paradise Sai Wonder.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name: Paradise Sai Wonder</h1>
+                <h2>Address:Sai Wonder, Plot No. 4 & 5, Raintree Marg, Sector 35F, Sector 35I, Kharghar, Navi Mumbai, Maharashtra 410210</h2>
+                <div class="weather-data-row" id="weather-data6"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info6"></div>
+            </div>
+        </div>
+        <div class="item item-3">
+            <a href="./paradise_sai_wonder.html"><button class="button"><b><u>Rental</b></u></button></a><br>
+            <a href="nm_30-40.html"><button class="button"><b><u>Map View</b></u></button></a><br>
+            <a href="https://maps.app.goo.gl/ykyVDoC1FpFJWPGGA"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image7" src="img/Fortune Spring.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name:Fortune Spring </h1>
+                <h2>Address:Plot no 10, opposite Bank of India, Sector 35D, Sector 34C, Sector 36, Kharghar, Navi Mumbai, Maharashtra 410210</h2>
+                <div class="weather-data-row" id="weather-data7"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info7"></div>
+            </div>
+        </div>
+        <div class="item item-3">
+            <a href="./fortune_spring_main.html"><button class="button"><b><u>Rental</b></u></button></a><br>
+            <a href="nm_40.html"><button class="button"><b><u>Map View</b></u></button></a><br>
+            <a href="https://maps.app.goo.gl/xYkGJB3aMWYCRb769"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image8" src="img/Unique Twins Tower Chs.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name:Unique Twins Tower Chs</h1>
+                <h2>Address:Sector 20, Kharghar, Navi Mumbai, Maharashtra 410210</h2>
+                <div class="weather-data-row" id="weather-data8"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info8"></div>
+            </div>
+        </div>
+        <div class="item item-3">
+            <a href="./unique_twins.html"><button class="button"><b><u>Rental</b></u></button></a><br>
+            <a href="nm_40.html"><button class="button"><b><u>Map View</b></u></button></a><br>
+            <a href="https://maps.app.goo.gl/FCJS11FQfdo4FEXY6"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image9" src="img/Valley Shilp CHS.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name:Valley Shilp CHS</h1>
+                <h2>Address:Plot No 3, Valley Shilp Rd, Sector 36, Kharghar, Navi Mumbai, Maharashtra 410210</h2>
+                <div class="weather-data-row" id="weather-data9"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info9"></div>
+            </div>
+        </div>
+        <div class="item item-3">
+            <a href="./valley_shilp.html"><button class="button"><b><u>Rental</b></u></button></a><br>
+            <a href="nm_40.html"><button class="button"><b><u>Map View</b></u></button></a><br>
+            <a href="https://maps.app.goo.gl/teBg4FNFSoZP4yRP9"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+    <script>
+        const api_key = "QDAPwUamxNikadDySKyP3lQN52W6y4de";
+
+        function getLocationKey(location) {
+            const url = `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${api_key}&q=${location}&details=true`;
+            return fetch(url)
+                .then(response => response.json())
+                .then(data => data[0] ? data[0]["Key"] : null);
+        }
+
+        function displayWeatherData(location_key, containerId) {
+            const current_weather_url = `http://dataservice.accuweather.com/currentconditions/v1/${location_key}?apikey=${api_key}&details=true`;
+            fetch(current_weather_url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.length > 0) {
+                        const weatherDataContainer = document.getElementById(containerId);
+                        weatherDataContainer.innerHTML = ""; // Clear previous content
+                        data.forEach(weather => {
+                            weatherDataContainer.innerHTML += `
+                                <div class="weather-data-item">
+                                    <p>Condition: ${weather["WeatherText"]}</p>
+                                    <p>Temperature: ${weather["Temperature"]["Metric"]["Value"]}°${weather["Temperature"]["Metric"]["Unit"]}</p>
+                                </div>
+                            `;
+                        });
+                    } else {
+                        const weatherDataContainer = document.getElementById(containerId);
+                        weatherDataContainer.innerHTML = "<p>Weather data not available.</p>";
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+        //weather data being fetched......
+        document.addEventListener("DOMContentLoaded", () => {
+            getLocationKey("Kharghar")
+                .then(location_key => {
+                    if (location_key) {
+                        displayWeatherData(location_key, "weather-data1");
+                        displayWeatherData(location_key, "weather-data2");
+                        displayWeatherData(location_key, "weather-data3");
+                        displayWeatherData(location_key, "weather-data4");
+                        displayWeatherData(location_key, "weather-data5");
+                        displayWeatherData(location_key, "weather-data6");
+                        displayWeatherData(location_key, "weather-data7");
+                        displayWeatherData(location_key, "weather-data8");
+                        displayWeatherData(location_key, "weather-data9");
+                    } else {
+                        const weatherData1 = document.getElementById("weather-data1");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData2 = document.getElementById("weather-data2");
+                        weatherData2.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData3 = document.getElementById("weather-data3");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData4 = document.getElementById("weather-data4");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData5 = document.getElementById("weather-data5");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData6 = document.getElementById("weather-data6");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData7 = document.getElementById("weather-data7");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData8 = document.getElementById("weather-data8");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData9 = document.getElementById("weather-data9");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                    }
+                });
+        });
+        //full screen mode in the images
+        function toggleFullScreen(element) {
+            if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+                if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                } else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+            }
+        }
+
+        document.getElementById("image1").addEventListener("click", function() {
+            var image = document.getElementById("image1");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image2").addEventListener("click", function() {
+            var image = document.getElementById("image2");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image3").addEventListener("click", function() {
+            var image = document.getElementById("image3");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image4").addEventListener("click", function() {
+            var image = document.getElementById("image4");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image5").addEventListener("click", function() {
+            var image = document.getElementById("image5");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image6").addEventListener("click", function() {
+            var image = document.getElementById("image6");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image7").addEventListener("click", function() {
+            var image = document.getElementById("image7");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image8").addEventListener("click", function() {
+            var image = document.getElementById("image8");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image9").addEventListener("click", function() {
+            var image = document.getElementById("image9");
+            toggleFullScreen(image);
+        });
+        function showAQI() {
+            var area = "Panvel"; // Set area to Kharghar or any desired area
+            var url = `https://api.waqi.info/feed/${area}/?token=bb37c4eed6f5a2ac5365542f623a690db1e82003`;//Api key for Air quality index
+    
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info1').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info1').innerText = `AQI data not available for ${area}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info2').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info2').innerText = `AQI data not available for ${area}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info3').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info3').innerText = `AQI data not available for ${area}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info4').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info4').innerText = `AQI data not available for ${area}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info5').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info5').innerText = `AQI data not available for ${area}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info6').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info6').innerText = `AQI data not available for ${area}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info7').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info7').innerText = `AQI data not available for ${area}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info8').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info8').innerText = `AQI data not available for ${area}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info9').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info9').innerText = `AQI data not available for ${area}`;
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching AQI data:', error);
+                    document.getElementById('aqi-info1').innerText = 'An error occurred while fetching data';
+                });
+        }
+    
+        window.onload = function() {
+            showAQI(); // Call showAQI function when the page loads
+        };
+        const budgetButtons = document.querySelectorAll('.budget-button');
+    var budgetInput;
+
+// Add a click event listener to each button
+budgetButtons.forEach(button => {
+  button.addEventListener('click', function() {
+    // Deselect all buttons
+    budgetButtons.forEach(btn => {
+      btn.classList.remove('selected');
+      btn.style.backgroundColor = 'white';
+      btn.style.color = 'black';
+    });
+
+    // Select the clicked button
+    this.classList.add('selected');
+    this.style.backgroundColor = 'blue';
+    this.style.color = 'white';
+  });
+});
+      function changeColor(button) {
+        button.style.backgroundColor = "blue";
+        button.style.color = "white";
+      }
+    function viewOnMap() {
+      // Add code to open a map with routing
+      // You can use JavaScript libraries like Google Maps API for this purpose
+      alert("View on Map clicked");
+    }
+    
+        function getBudgetData(button) {
+            
+            budgetInput = button.getAttribute('data-budget');
+            
+          }
+    
+    function viewStreetView() {
+      // Add code to view the location on street view
+      // You can use JavaScript libraries like Google Maps API for this purpose
+      alert("View on Street View clicked");
+    }
+    function checkFormData()
+    {
+      const educationInput = document.getElementById('education-browser').value;
+     
+
+      // Get the input value for budget
+      
+      
+        if (educationInput === "AP Shah , Sector 12 , Thane(W)") {
+          // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+          window.location.href = './ap_main.html';
+        }
+        if (educationInput === "NMIMS ,Sector 35 , Kharghar  ") {
+          // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+          window.location.href = './nmims_main.html';
+        }
+        if (educationInput === "VIBGYOR high School , Sector 15 , Kharghar ") {
+          // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+          window.location.href = './vib_main.html';
+        }
+        if (educationInput === "Dy Patil demmed to be University, Sector 7, Nerul") {
+          // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+          window.location.href = './dy_edu_main.html';
+        }
+        if (educationInput === "Ryan International School , Sector 10, Sanpada") {
+          // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+          window.location.href = './rya_main.html';
+        }
+        if (educationInput === "AP Shah , Sector 12 , Thane(W)" && budgetInput === "20000-30000") {
+          // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+          window.location.href = './ap20-30.html';
+        }
+        if (educationInput === "AP Shah , Sector 12 , Thane(W)" && budgetInput === "30000-40000") {
+          // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+          window.location.href = './ap30-40.html';
+        }
+        if (educationInput === "AP Shah , Sector 12 , Thane(W)" && budgetInput === "40000 or more") {
+          // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+          window.location.href = './ap40.html';
+        }
+      if (educationInput === "VIBGYOR high School , Sector 15 , Kharghar " && budgetInput === "30000-40000") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './vib20-30.html';
+      }
+      if (educationInput === "VIBGYOR high School , Sector 15 , Kharghar " && budgetInput === "30000-40000") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './vib30-40.html';
+      }
+      if (educationInput === "VIBGYOR high School , Sector 15 , Kharghar " && budgetInput === "40000 or more") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './vib40.html';
+      }
+      if (educationInput === "Dy Patil demmed to be University, Sector 7, Nerul" && budgetInput === "20000-30000") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './dy_edu20-30.html';
+      }
+      if (educationInput === "Dy Patil demmed to be University, Sector 7, Nerul" && budgetInput === "30000-40000") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './dy_edu30-40.html';
+      }
+      if (educationInput === "Dy Patil demmed to be University, Sector 7, Nerul" && budgetInput === "40000 or more") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './dy_edu40.html';
+      }
+      if (budgetInput === "20000-30000") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './nm20-30.html';
+      }
+      if (budgetInput === "30000-40000") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './nm30-40.html';
+      }
+      if (budgetInput === "40000 or more") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './nm40.html';
+      }
+      if (educationInput === "Ryan International School , Sector 10, Sanpada" && budgetInput === "20000-30000") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './rya20-30.html';
+      }
+      if (educationInput === "Ryan International School , Sector 10, Sanpada" && budgetInput === "30000-40000") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './rya30-40.html';
+      }
+      if (educationInput === "Ryan International School , Sector 10, Sanpada" && budgetInput === "40000 or more") {
+        // Redirect to a certain page (replace 'redirect_url' with the actual URL)
+        window.location.href = './rya40.html';
+      }
+      
+      // Alert the input values
+      alert('You have selected \n Education Place: ' + educationInput + '\nBudget: ' + budgetInput + '\nredirecting');
+
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TCS</title>
+    <link rel="stylesheet" href="style2.css">
+    <style>
+        .weather-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .weather-info {
+            width: 10000%; /* Adjusted the width */
+            margin-left: 10px;
+            text-align: justify;
+        }
+        .weather-data-row {
+            display: grid; /* Display weather data in a row */
+            flex-direction: row;
+            grid-template-rows: 10px;
+            grid-template-columns: 400px 400px; /* Allow wrapping of weather data items */
+        }
+        .weather-data-item {
+            flex: 1; /* Each weather data item takes equal space */
+            margin-right: 20px;
+             /* Adjust spacing between weather data items */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="navdiv">
+                <div class="logo"><a href="../index.html" style="color:white">DigiLife</a></div>
+                <ul>
+                    <div class="dropdown">
+                        <button class="btn">Budget</button>
+                        <div class="dropdown-content">
+                          <a href="tcs_main.html">All</a>
+                          <a href="tcs20-30.html">20k-30k</a>
+                          <a href="tcs30-40.html">30k-40k</a>
+                          <a href="tcs40.html">40k+</a>
+                        </div>
+                    </div> 
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image7" src="img/Platinum Venicia.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name:Platinum Venicia</h1>
+                <h2>Address:Platinum Venicia, Nerul East, Sector 11, Nerul, Navi Mumbai, Maharashtra 400706</h2>
+                <div class="weather-data-row" id="weather-data7"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info7"></div>
+            </div>
+        </div>
+        <div class="item item-3">
+            <a href="./platinum_venecia.html"><button class="button"><b><u>Rental</b></u></button></a><br>
+            <a href="./tcs_40.html"><button class="button"><b><u>Map View</u></b></button></a><br>
+            <a href="https://maps.app.goo.gl/9XqiQGFTtAGHcNki8"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image8" src="img/Krishna Heights.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name:Krishna Heights</h1>
+                <h2>Address:Krishna Heights, Sector 8, Airoli, Navi Mumbai, Maharashtra 400708</h2>
+                <div class="weather-data-row" id="weather-data8"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info8"></div>
+            </div>
+        </div>
+        <div class="item item-3">
+            <a href="./krishna_main.html"><button class="button"><b><u>Rental</b></u></button></a><br>
+            <a href="./tcs_40.html"><button class="button"><b><u>Map View</u></b></button></a><br>
+            <a href="https://maps.app.goo.gl/DEUTCAwk7KiEooYPA"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+    <div class="container">
+        <div class="item item-1">
+            <img id="image9" src="img/Rivali Park.png" alt="Description of the image">
+        </div>
+        <div class="item item-2 weather-container"> <!-- Added weather-container class -->
+            <div class="weather-info" id="weather-info">
+                <h1>Society Name:Rivali Park</h1>
+                <h2>Address:Rivali Park Bo-Rivali, Metro Station, Western Express Hwy, near Magathane, Borivali East, Mumbai, Maharashtra 400066</h2>
+                <div class="weather-data-row" id="weather-data9"></div> <!-- New div for weather data -->
+                <br><br><br><br>
+                <div class="aqi-info" id="aqi-info9"></div>
+            </div>
+        </div>
+        <div class="item item-3">
+            <a href="./rivali_park.html"><button class="button"><b><u>Rental</b></u></button></a><br>
+            <a href="./tcs_40.html"><button class="button"><b><u>Map View</u></b></button></a><br>
+            <a href="https://maps.app.goo.gl/K9J4EztLnHXkkAASA"><button class="button"><b><u>Street View</u></b></button></a>
+        </div>    
+    </div>
+        
+    <script>
+        const api_key = "QDAPwUamxNikadDySKyP3lQN52W6y4de";
+
+        function getLocationKey(location) {
+            const url = `http://dataservice.accuweather.com/locations/v1/cities/search?apikey=${api_key}&q=${location}&details=true`;
+            return fetch(url)
+                .then(response => response.json())
+                .then(data => data[0] ? data[0]["Key"] : null);
+        }
+
+        function displayWeatherData(location_key, containerId) {
+            const current_weather_url = `http://dataservice.accuweather.com/currentconditions/v1/${location_key}?apikey=${api_key}&details=true`;
+            fetch(current_weather_url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.length > 0) {
+                        const weatherDataContainer = document.getElementById(containerId);
+                        weatherDataContainer.innerHTML = ""; // Clear previous content
+                        data.forEach(weather => {
+                            weatherDataContainer.innerHTML += `
+                                <div class="weather-data-item">
+                                    <p>Condition: ${weather["WeatherText"]}</p>
+                                    <p>Temperature: ${weather["Temperature"]["Metric"]["Value"]}°${weather["Temperature"]["Metric"]["Unit"]}</p>
+                                </div>
+                            `;
+                        });
+                    } else {
+                        const weatherDataContainer = document.getElementById(containerId);
+                        weatherDataContainer.innerHTML = "<p>Weather data not available.</p>";
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+        //weather data being fetched......
+        document.addEventListener("DOMContentLoaded", () => {
+            getLocationKey("Mumbai")
+                .then(location_key => {
+                    if (location_key) {
+                        displayWeatherData(location_key, "weather-data3");
+                        displayWeatherData(location_key, "weather-data4");
+                        
+                    } else {
+                        const weatherData1 = document.getElementById("weather-data3");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData4 = document.getElementById("weather-data4");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                    }
+                });
+                getLocationKey("Nerul")
+                .then(location_key => {
+                    if (location_key) {
+                        
+                        displayWeatherData(location_key, "weather-data5");
+                        displayWeatherData(location_key, "weather-data7");
+                        
+                    } else {
+                        
+                        const weatherData5 = document.getElementById("weather-data5");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData8 = document.getElementById("weather-data7");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                    }
+                });
+                getLocationKey("Thane")
+                .then(location_key => {
+                    if (location_key) {
+                        displayWeatherData(location_key, "weather-data1");
+                        displayWeatherData(location_key, "weather-data2");
+                        displayWeatherData(location_key, "weather-data8");
+                        
+                    } else {
+                        const weatherData3 = document.getElementById("weather-data1");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData6 = document.getElementById("weather-data2");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData7 = document.getElementById("weather-data8");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                    }
+                });
+                getLocationKey("Borivali")
+                .then(location_key => {
+                    if (location_key) {
+                        displayWeatherData(location_key, "weather-data6");
+                        displayWeatherData(location_key, "weather-data9");
+                        
+                    } else {
+                        const weatherData3 = document.getElementById("weather-data6");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        const weatherData6 = document.getElementById("weather-data9");
+                        weatherData1.innerHTML += "<p>Weather data not available.</p>";
+                        
+                    }
+                });
+        });
+        //full screen mode in the images
+        function toggleFullScreen(element) {
+            if (!document.fullscreenElement && !document.mozFullScreenElement && !document.webkitFullscreenElement && !document.msFullscreenElement) {
+                if (element.requestFullscreen) {
+                    element.requestFullscreen();
+                } else if (element.msRequestFullscreen) {
+                    element.msRequestFullscreen();
+                } else if (element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                } else if (element.webkitRequestFullscreen) {
+                    element.webkitRequestFullscreen();
+                }
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                } else if (document.msExitFullscreen) {
+                    document.msExitFullscreen();
+                } else if (document.mozCancelFullScreen) {
+                    document.mozCancelFullScreen();
+                } else if (document.webkitExitFullscreen) {
+                    document.webkitExitFullscreen();
+                }
+            }
+        }
+
+        document.getElementById("image1").addEventListener("click", function() {
+            var image = document.getElementById("image1");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image2").addEventListener("click", function() {
+            var image = document.getElementById("image2");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image3").addEventListener("click", function() {
+            var image = document.getElementById("image3");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image4").addEventListener("click", function() {
+            var image = document.getElementById("image4");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image5").addEventListener("click", function() {
+            var image = document.getElementById("image5");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image6").addEventListener("click", function() {
+            var image = document.getElementById("image6");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image7").addEventListener("click", function() {
+            var image = document.getElementById("image7");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image8").addEventListener("click", function() {
+            var image = document.getElementById("image8");
+            toggleFullScreen(image);
+        });
+        document.getElementById("image9").addEventListener("click", function() {
+            var image = document.getElementById("image9");
+            toggleFullScreen(image);
+        });
+        function showAQI() {
+            var area1 = "Borivali"; // Set area to Nerul or any desired area
+            var area= "Thane";
+            var area2 = "Navi Mumbai";
+            var area3 = "Mumbai";
+            var url = `https://api.waqi.info/feed/${area}/?token=bb37c4eed6f5a2ac5365542f623a690db1e82003`;//Api key for Air quality index
+            var url1 = `https://api.waqi.info/feed/${area1}/?token=bb37c4eed6f5a2ac5365542f623a690db1e82003`;//Api key for Air quality index
+            var url2 = `https://api.waqi.info/feed/${area2}/?token=bb37c4eed6f5a2ac5365542f623a690db1e82003`;//Api key for Air quality index
+            var url3 = `https://api.waqi.info/feed/${area3}/?token=bb37c4eed6f5a2ac5365542f623a690db1e82003`;//Api key for Air quality index
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info1').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info1').innerText = `AQI data not available for ${area}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info2').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info2').innerText = `AQI data not available for ${area}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info8').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info8').innerText = `AQI data not available for ${area}`;
+                    }
+                })
+                fetch(url1)
+                .then(response => response.json())
+                .then(data => {
+                    
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info6').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info6').innerText = `AQI data not available for ${area1}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info9').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info9').innerText = `AQI data not available for ${area1}`;
+                    }
+                    
+                })
+                fetch(url2)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info7').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info7').innerText = `AQI data not available for ${area2}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info5').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info5').innerText = `AQI data not available for ${area2}`;
+                    }
+                })
+                fetch(url3)
+                .then(response => response.json())
+                .then(data => {
+                    
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info3').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info3').innerText = `AQI data not available for ${area3}`;
+                    }
+                    if (data.status === 'ok') {
+                        var aqi = data.data.aqi;
+                        document.getElementById('aqi-info4').innerText = `AQI  :${aqi}`;
+                    } else {
+                        document.getElementById('aqi-info4').innerText = `AQI data not available for ${area3}`;
+                    }
+                    
+                })
+            
+                .catch(error => {
+                    console.error('Error fetching AQI data:', error);
+                    document.getElementById('aqi-info1').innerText = 'An error occurred while fetching data';
+                });
+        }
+    
+        window.onload = function() {
+            showAQI(); // Call showAQI function when the page loads
+        };
+    </script>
+</body>
+</html>

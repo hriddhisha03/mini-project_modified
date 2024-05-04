@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">   
+    <title>landing page</title>
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">DigiLife</a>
+        <i class='bx bx-menu' id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="#slider-2">About Us</a>
+            <a href="#section2">Properties</a>
+            <a href="#section3">Services</a>
+        </nav>
+    </header>
+    <div class="nav-bg"></div>
+    
+
+<!-- First Section -->  
+<section class="section" id="section1">
+    
+        <div class="wrapper">
+            <div class="container">
+                <!-- slider-1 -->
+                <input type="radio" name="slide" id="c1" checked style="display: none;">
+                <label for="c1" class="card">
+                    <div class="row">
+                        <i class="material-icons">home</i>
+                        <div class="description">
+                            <h1>Preferences</h1>
+                            <p>Plan your preferences and your comfort with us.</p>
+                        </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="material-icons">school</i>Education</button>
+                    <div class="dropdown-content">
+                        <a href="./NMIMS/nmims_main.html">NMIMS Kharghar</a>
+                        <a href="./RYAN/ryan_main.html">Ryan International</a>
+                        <a href="./VIBGYOR/vibgyor_main.html">VIBGYOR</a>
+                        <a href="./DY Patil/dy_main.html">DY Patil College</a>
+                        <a href="./AP SHAH/ap_shah_main.html">A P SHAH</a>
+                        
+                    </div>
+                </div>
+                
+                <div class="dropdown">
+                    <button class="dropbtn"><i class="material-icons">work</i>Occupation</button>
+                    <div class="dropdown-content">
+                        <a href="./TCS Thane/tcs_main.html">TCS</a>
+                        <a href="./WIPRO/wipro_main.html">Wipro</a>
+                        <a href="./JIO/jio_main.html">JIO</a>
+                        <a href="./TIMES OF INDIA/toi_main.html">TIMES OF INDIA</a>
+                        <a href="./HINDUSTAN UNILEVER/hind_main.html">HINDUSTAN UNILEVER</a>
+                    </div>
+                </div>
+                </label>
+                
+                <!-- slider-2 -->
+
+                <input type="radio" name="slide" id="c2" style="display: none;">
+                <label for="c2" class="card">
+                    <div class="row">
+                        <i class="material-icons">content_paste_search</i>
+                        <div class="description">
+                            <h1>Know About Us</h1>
+                        </div>
+                    </div>
+                    <p>Eschew relocation anxieties and embark on a transformative journey with DigiLife. We navigate every phase, from career relocations and family transitions to academic pursuits.  Our platform prioritizes personalization, ensuring you find stylish housing, convenient transportation, and essential amenities like schools and hospitals for ultimate peace of mind.
+                        <br></br>
+                    Imagine tailoring your search to perfectly suit your budget, size requirements, and desired features. Every decision reflects your unique needs, guaranteeing a smooth integration into your new life. Digital Living transcends mere housing placement; we're your relocation partner. User-friendly tools and cutting-edge technology empower informed choices, allowing you to discover the ideal neighborhood close to work, schools, or healthcare facilities.  Whether you're a student, professional, or healthcare worker, Digital Living empowers confident navigation of your new community. Let's embark on this extraordinary journey together and unlock the vibrant potential of your new life.</p>
+                </label>
+
+                <!-- slider-3 -->
+
+                <input type="radio" name="slide" id="c3" style="display: none;">
+                <label for="c3" class="card">
+                    <div class="row">
+                        <i class="material-icons">login</i>
+                        <div class="description">
+                            <h1>Create Account</h1>
+                        </div>
+                    </div>
+                        <div class="container" id="container">
+                            <div class="form-container sign-up-container">
+                                <form action="#">
+                                    <h1>Create Account</h1>
+                                    <div class="social-container">
+                                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                    <span>or use your email for registration</span>
+                                    <input type="text" placeholder="Name" />
+                                    <input type="email" placeholder="Email" />
+                                    <input type="password" placeholder="Password" />
+                                    <button>Sign Up</button>
+                                </form>
+                            </div>
+                            <div class="form-container sign-in-container">
+                                <form action="#">
+                                    <h1>Sign in</h1>
+                                    <div class="social-container">
+                                        <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+                                        <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+                                    </div>
+                                    <span>or use your account</span>
+                                    <input type="email" placeholder="Email" />
+                                    <input type="password" placeholder="Password" />
+                                    <a href="#">Forgot your password?</a>
+                                    <button>Sign In</button>
+                                </form>
+                            </div>
+                            <div class="overlay-container">
+                                <div class="overlay">
+                                    <div class="overlay-panel overlay-left">
+                                        <h1>Welcome Back!</h1>
+                                        <p>To keep connected with us please login with your personal info</p>
+                                        <button class="ghost" id="signIn">Sign In</button>
+                                    </div>
+                                    <div class="overlay-panel overlay-right">
+                                        <h1>Hello, Friend!</h1>
+                                        <p>Enter your personal details and start journey with us</p>
+                                        <button class="ghost" id="signUp">Sign Up</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </label>
+
+                <!-- slider-4 -->
+
+                <input type="radio" name="slide" id="c4" style="display: none;">
+                <label for="c4" class="card">
+                    <div class="row">
+                        <i class="material-icons">account_circle</i>
+                        <div class="description">
+                            <h1>Contact Us</h1>
+                            <p>Get in touch with us today!
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form">
+                        <div class="container">
+                            <div class="main">
+                                <div class="content">   
+                                    <form action="#" method="post">
+                                            <input type="text" name="name" placeholder="Enter Your Name">       
+                                            <input type="email" name="name" placeholder="Enter Your Email">
+                                            <textarea name="message" placeholder="Your Message"></textarea>                   
+                                            <button type="submit" class="btn">Send <i class="fas fa-paper-plane"></i></button>
+                                    </form>
+                                </div>
+                                <div class="form-img">
+                                    <img src="bg1.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+                </label>
+            </div>
+        </div>
+ 
+</section>
+<!-- Second Section -->
+
+<div class="latest_properties">
+    <h1>Our Latest Properties</h1>
+</div>
+<section class="section" id="section2">
+    <div class="properties">
+        <div class="properties-slide">
+          <a href="index.html">
+              <img src="bg.jpg"  alt="img1"/>
+          </a>
+          <a href="destination.html">
+              <img src="bg1.jpg"  alt="img2"/>
+          </a>
+          <a href="destination.html">
+              <img src="bg1.png"  alt="img3"/>
+          </a>
+          <a href="destination.html">
+              <img src="bg2.jpg"  alt="img4"/>
+          </a>
+          <a href="destination.html">
+              <img src="bg3.jpg"  alt="img5"/>
+          </a>
+          <a href="destination.html">
+              <img src="bg4.jpg"  alt="img6"/>
+          </a>
+          <a href="destination.html">
+              <img src="bg5.jpg"  alt="img7"/>
+          </a>
+          <a href="destination.html">
+              <img src="bgbg.jpg"  alt="img8"/>
+          </a>
+        </div>
+      </div>
+      <script>
+        var copy = document.querySelector(".properties-slide").cloneNode(true);
+        document.querySelector(".properties").appendChild(copy);
+      </script>
+</section>
+
+<!-- Third Section -->
+<section class="section" id="section3">
+    <div class="container1">
+        <h1>Our services</h1>
+        <div class="row">
+            <div class="services">
+                <i class="material-icons">map</i>
+                <h2>Mapping</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="services">
+                <i class="material-icons">apartment</i>
+                <h2>Rentals</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="services">
+                <i class="material-icons">streetview</i>
+                <h2>Street view</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="services">
+                <i class="material-icons">pin_drop</i>
+                <h2>Landmarks</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="services">
+                <i class="material-icons">wb_twilight</i>
+                <h2>Weather</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+            <div class="services">
+                <i class="material-icons">air</i>
+                <h2>Air Quality Index</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="footer-content">
+        <h3>DigiLife</h3>
+        <p>Making relocation a breeze with a friendly touch - DigiLife, where moving feels like home.</p>
+        <ul class="socials">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-google-plus"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+        </ul>
+    </div>
+    <div class="footer-bottom">
+        <p>copyright &copy;2024 DigiLife. designed by <span>QuadTeam</span></p>
+    </div>
+</footer>
+
+<!-- srcipt -->
+<script src="script.js"></script>
+
+</body>
+</html>
